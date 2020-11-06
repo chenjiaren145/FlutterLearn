@@ -38,7 +38,7 @@ class UserLoginState extends State<UserLogin> {
                     },
                     decoration: InputDecoration(
                         labelText: "用户名",
-                        hintText: "用户名或邮箱",
+                        hintText: "不要太长的字符",
                         prefixIcon: Icon(Icons.person)),
                   ),
                 ),
@@ -55,7 +55,7 @@ class UserLoginState extends State<UserLogin> {
                     controller: _pwController,
                     decoration: InputDecoration(
                         labelText: "密码",
-                        hintText: "您的登录密码",
+                        hintText: "不要太简单的字符",
                         prefixIcon: Icon(Icons.lock)),
                   ),
                 ),
@@ -109,7 +109,7 @@ class UserLoginState extends State<UserLogin> {
             context: context, position: StyledToastPosition.center);
         Navigator.pop(context, "哈哈哈登陆成功了");
 
-        AppStatus.isAlreadyLogin =  true;
+        AppStatus.isAlreadyLogin = true;
 
 //        List<Cookie> cookies = [];
 //        HttpDio()

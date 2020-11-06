@@ -3,7 +3,6 @@ import 'package:MyFlutter/network/http_dio.dart';
 import 'package:MyFlutter/network/url.dart';
 import 'package:MyFlutter/page/padge_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -13,7 +12,7 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   /// 首页文章列表
   List<HomeArticleDataData> articles = <HomeArticleDataData>[];
-  Set<HomeArticleDataData> _saved = Set<HomeArticleDataData>();
+  Set<HomeArticleDataData> saved = Set<HomeArticleDataData>();
 
   /// 当前页数，每页固定20个
   int curPage = 0;
@@ -79,7 +78,7 @@ class HomeState extends State<Home> {
                   }
                 })
             : Center(
-                child: const Text('No items'),
+                child: const Text('暂无数据'),
               ),
       ),
     );

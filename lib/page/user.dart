@@ -19,21 +19,19 @@ class UserStatus extends State<User> {
       body: ConstrainedBox(
         constraints: BoxConstraints(
             minHeight: double.infinity, minWidth: double.infinity),
-        child: Row(
-          children: [
-            FlatButton(
-              onPressed: () async {
-                var result =
-                    await Navigator.pushNamed(context, PageConfig.userLogin);
-                // 暂时直接这样更新下
-                setState(() {});
-                print('user_login.dart的返回值：$result');
-              },
-              child: Center(
-                child: Text(AppStatus.isAlreadyLogin ? '登入状态' : '未登入'),
-              ),
+        child: Center(
+          child: FlatButton(
+            onPressed: () async {
+              var result =
+                  await Navigator.pushNamed(context, PageConfig.userLogin);
+              // 暂时直接这样更新下
+              setState(() {});
+              print('user_login.dart的返回值：$result');
+            },
+            child: Center(
+              child: Text(AppStatus.isAlreadyLogin ? '已登录' : '点击去登录'),
             ),
-          ],
+          ),
         ),
       ),
     );

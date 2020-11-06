@@ -12,4 +12,7 @@ class Url {
 
   /// 注册接口
   static const userRegister = '/user/register';
+
+  /// 搜索接口
+  static search(index) => '/article/query/$index/json';
 }
