@@ -11,9 +11,9 @@ void main() {
 }
 
 const bottomItems = [
-  BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
-  BottomNavigationBarItem(icon: Icon(Icons.assessment), title: Text("发现")),
-  BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("我的")),
+  BottomNavigationBarItem(icon: Icon(Icons.home), label: "首页"),
+  BottomNavigationBarItem(icon: Icon(Icons.assessment), label: "发现"),
+  BottomNavigationBarItem(icon: Icon(Icons.person), label: "我的"),
 ];
 
 final pages = [
