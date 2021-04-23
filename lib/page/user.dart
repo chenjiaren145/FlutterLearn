@@ -1,5 +1,5 @@
-import 'package:MyFlutter/config/app_status.dart';
-import 'package:MyFlutter/page/padge_config.dart';
+import 'package:my_flutter/config/app_status.dart';
+import 'package:my_flutter/page/padge_config.dart';
 import 'package:flutter/material.dart';
 
 class User extends StatefulWidget {
@@ -20,7 +20,7 @@ class UserStatus extends State<User> {
         constraints: BoxConstraints(
             minHeight: double.infinity, minWidth: double.infinity),
         child: Center(
-          child: FlatButton(
+          child: TextButton(
             onPressed: () async {
               var result =
                   await Navigator.pushNamed(context, PageConfig.userLogin);

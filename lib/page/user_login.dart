@@ -1,7 +1,7 @@
-import 'package:MyFlutter/bean/registered_entity.dart';
-import 'package:MyFlutter/config/app_status.dart';
-import 'package:MyFlutter/network/http_dio.dart';
-import 'package:MyFlutter/network/url.dart';
+import 'package:my_flutter/bean/registered_entity.dart';
+import 'package:my_flutter/config/app_status.dart';
+import 'package:my_flutter/network/http_dio.dart';
+import 'package:my_flutter/network/url.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
@@ -61,19 +61,17 @@ class UserLoginState extends State<UserLogin> {
                 ),
                 Align(
                   alignment: Alignment.topRight,
-                  child: FlatButton(
-                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+                  child: TextButton(
                     onPressed: () {
                       requestRegister(context);
                     },
-                    textColor: Colors.lightBlueAccent,
                     child: Text('点击注册'),
                   ),
                 ),
                 SizedBox(
                   width: 300,
                   height: 50,
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     child: Text("确定"),
                     onPressed: () {
                       requestLogin();

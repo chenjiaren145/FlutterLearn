@@ -1,6 +1,5 @@
-import 'package:MyFlutter/network/url.dart';
+import 'package:my_flutter/network/url.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:cookie_jar/cookie_jar.dart';
 
 /// 封装dio库的网络请求
@@ -20,11 +19,12 @@ class HttpDio {
     dio = Dio();
     if (options == null) {
       options = BaseOptions(
-        baseUrl: Url.baseUrl,
-        connectTimeout: 5000, // 链接超时
-        receiveTimeout: 6000, // 接受数据超时
-        contentType: Headers.formUrlEncodedContentType,
-      );
+          baseUrl: Url.baseUrl,
+          connectTimeout: 5000,
+          // 链接超时
+          receiveTimeout: 6000,
+          // 接受数据超时
+          contentType: Headers.formUrlEncodedContentType);
     }
     dio.options = options;
     // cookieJar = CookieJar();

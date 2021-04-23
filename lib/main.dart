@@ -1,9 +1,9 @@
-import 'package:MyFlutter/page/explore.dart';
-import 'package:MyFlutter/page/home.dart';
-import 'package:MyFlutter/page/home_doc.dart';
-import 'package:MyFlutter/page/padge_config.dart';
-import 'package:MyFlutter/page/user.dart';
-import 'package:MyFlutter/page/user_login.dart';
+import 'package:my_flutter/page/explore.dart';
+import 'package:my_flutter/page/home.dart';
+import 'package:my_flutter/page/home_doc.dart';
+import 'package:my_flutter/page/padge_config.dart';
+import 'package:my_flutter/page/user.dart';
+import 'package:my_flutter/page/user_login.dart';
 import 'package:flutter/material.dart';
 
 void main() {

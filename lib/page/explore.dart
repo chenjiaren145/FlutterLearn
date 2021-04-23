@@ -1,5 +1,5 @@
-import 'package:MyFlutter/network/http_dio.dart';
-import 'package:MyFlutter/network/url.dart';
+import 'package:my_flutter/network/http_dio.dart';
+import 'package:my_flutter/network/url.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 
@@ -73,11 +73,8 @@ class ExploreState extends State<Explore> {
             ),
             Scrollbar(
               child: SingleChildScrollView(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    Text(contentText),
-                  ],
+                child: Expanded(
+                  child: Text(contentText),
                 ),
               ),
             ),

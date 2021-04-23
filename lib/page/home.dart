@@ -1,7 +1,7 @@
-import 'package:MyFlutter/bean/home_article_entity.dart';
-import 'package:MyFlutter/network/http_dio.dart';
-import 'package:MyFlutter/network/url.dart';
-import 'package:MyFlutter/page/padge_config.dart';
+import 'package:my_flutter/bean/home_article_entity.dart';
+import 'package:my_flutter/network/http_dio.dart';
+import 'package:my_flutter/network/url.dart';
+import 'package:my_flutter/page/padge_config.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -197,7 +197,7 @@ class HomeState extends State<Home> {
 
   /// 请求收藏接口（站内文章的）
   requestCollect(int index, int id) {
-    HttpDio().dio.post(Url.collect(id)).then((value) => print(value));
+    HttpDio().dio.post(Url.collect(id)).then((value) => {print(value)});
   }
 
   /// 请求文章列表数据
@@ -219,7 +219,7 @@ class HomeState extends State<Home> {
         isLoading = false;
       });
     }).catchError((error) {
-      print('失败了: ${error.toString()}');
+      print('requestData报错: ${error.toString()}');
       setState(() {
         isLoading = false;
       });
